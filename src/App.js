@@ -18,6 +18,9 @@ import DisperseDyes from './products/disperse-dyes.js';
 import AcidBaseDyes from './products/AcidBase.js';
 import NaptholBase from './products/napthol-base.js';
 import Contact from './components/Contact.js';
+import RD from './components/R&D.js';
+import EnquireForm from './components/EnquireForm.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     return (
@@ -40,6 +43,8 @@ function App() {
                 <Route path="/products/AcidBase" element={<AcidBaseDyes />} />
                 <Route path="/products/napthol-base" element={<NaptholBase />} />
                 <Route path="/Contact" element={<Contact />} />
+                <Route path='/EnquireForm' element={<EnquireForm/>}/>
+                <Route path='/rnd' element={<RD/>}/>
             </Routes>
         </Router>
     );

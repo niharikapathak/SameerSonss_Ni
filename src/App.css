@@ -100,12 +100,14 @@ h2 {
 .style1 {
   width: 100%;
   height: 300px;
+
 }
 
 
 .style7 {
   height: 135px;
   text-align: center;
+  font-weight: bold;
 }
 
 .style20 {
@@ -133,6 +135,7 @@ h2 {
   height: 35px;
   font-family: "Times New Roman", Times, serif;
   width: 70px;
+  font-weight: bold;
 }
 
 .style11 {

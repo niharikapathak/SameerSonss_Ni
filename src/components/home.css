@@ -12,96 +12,61 @@ html {
 }
 
 .landing-section {
-  background-color: white;
-  background-size: cover;
-  background-position: center;
+  background: url('../images/splash.jpg') no-repeat center center/cover;
   height: 68vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end; /* Align items to the right side */
+  align-items: center;
   padding: 20px;
   position: relative;
-  overflow: hidden; /* Hide overflow to prevent images from showing outside */
+  overflow: hidden;
+  animation: fadeIn 3s ease-in-out;
 }
 
 .symbol-image {
-  position: absolute; /* Position the image absolutely */
-  top: 25%; /* Adjust top positioning as needed */
-  right: 19%; /* Adjust right positioning as needed */
-  width: 100px; /* Set width as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.slide-container {
-  margin-left: 7%;
   position: absolute;
-  left: 15px; /* Adjust left position */
-  bottom: 0; /* Start at the bottom of the landing-section */
-  display: flex;
-  flex-wrap: wrap; /* Ensure images wrap to next line */
-  gap: 10px; /* Adjust gap between images */
-  width: calc(50% - 10px); /* Set width to fit within landing-section */
-  animation: slideUp 8s linear infinite; /* Animation settings */
-  z-index: 1; /* Ensure images are above background content */
+  top: 30%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: slideInFromTop 2s ease-in-out;
 }
 
-.slide-image {
-  padding-right: 3.5%;
-  width: 150px; /* Adjust width of each slide image */
-  height: 250px;
-  object-fit: cover; /* Ensure images maintain aspect ratio */
-}
-  
-@keyframes slideUp {
-  0% {
-    transform: translateY(100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.slide-image:nth-child(1),
-.slide-image:nth-child(2) {
-  width: 50%; /* Each image takes half the width */
+.ribbon, .slogan {
+  position: absolute;
+  right: 20px;
+  z-index: 3;
+  text-align: right;
+  color: #3b5998;
+  animation: fadeIn 3s ease-in-out;
 }
 
 .ribbon {
-  padding-top: 10%;
-  margin-right: 10%;
-  text-align: right;
-  z-index: 2; /* Ensure ribbon text is above images */
+  top: 40%;
+  animation-delay: 1s;
 }
 
 .ribbon h2 {
-  color: #3b5998;
   font-size: 5rem;
   font-weight: bold;
   font-family: 'Algerian', sans-serif;
 }
 
 .slogan {
-  margin-right: 10%;
-  text-align: right;
-  z-index: 2; /* Ensure slogan text is above images */
+  top: 55%;
+  animation-delay: 1.5s;
 }
 
 .since-1992 p {
-  padding-right: 35%;
-  margin: 2px 0;
   font-size: 2rem;
   font-family: 'Arial', sans-serif;
-  z-index: 2; /* Ensure text is above images */
 }
 
 .colour-ur-dreams p {
   margin: 2px 0;
   font-size: 5rem;
   font-family: 'Forte', cursive;
-  z-index: 2; /* Ensure text is above images */
 }
 
 .colour-ur-dreams p span {
@@ -129,13 +94,43 @@ html {
 .colour-ur-dreams p span:nth-child(19) { color: #990033; /* Dark Red */ }
 .colour-ur-dreams p span:nth-child(20) { color: #660000; /* Dark Maroon */ }
 
+.slide-container {
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: calc(50% - 10px);
+  animation: slideUp 8s linear infinite;
+  z-index: 1;
+}
+
+.slide-image {
+  padding-right: 3.5%;
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .aboutus {
   background-color: whitesmoke;
   height: 50vh;
   display: flex;
   align-items: center;
   padding: 20px;
-  position: relative; /* Ensure z-index works correctly */
+  position: relative;
 }
 
 .aboutus-image {
@@ -143,13 +138,13 @@ html {
   width: 160px;
   height: 160px;
   border: 2px solid #000;
-  margin-right: 20px; /* Reduce the gap between image and text */
+  margin-right: 20px;
 }
 
 .aboutus-content {
   align-items: center;
   max-width: 1000px;
-  padding-left: 20px; /* Reduce the padding */
+  padding-left: 20px;
 }
 
 .aboutus h2 {
@@ -157,7 +152,7 @@ html {
   align-items: center;
   margin-bottom: 10px;
   margin-top: 10px;
-  color: #3b5998; /* Change color to #3b5998 */
+  color: #3b5998;
 }
 
 .style7 {
@@ -180,41 +175,41 @@ html {
 
 @media (max-width: 768px) {
   .aboutus {
-    flex-direction: column-reverse; /* Reverse flex direction on smaller screens */
+    flex-direction: column-reverse;
   }
 
   .aboutus-image {
     margin-right: 0;
     margin-left: 0;
-    margin-bottom: 20px; /* Add margin bottom to separate image and text */
+    margin-bottom: 20px;
   }
 
   .aboutus-content {
     padding-left: 0;
-    text-align: center; /* Center align text on smaller screens */
+    text-align: center;
   }
 
   .slide-container {
     position: absolute;
-    left: 10px; /* Adjust left position */
-    bottom: 20px; /* Adjust bottom position */
+    left: 10px;
+    bottom: 20px;
     display: flex;
-    flex-wrap: wrap; /* Ensure images wrap to next line */
-    gap: 10px; /* Adjust gap between images */
-    width: calc(100% - 20px); /* Set width to fit within landing-section */
-    overflow-x: hidden; /* Hide horizontal scroll on smaller screens */
-    z-index: 1; /* Ensure images are above background content */
+    flex-wrap: wrap;
+    gap: 10px;
+    width: calc(100% - 20px);
+    overflow-x: hidden;
+    z-index: 1;
   }
 
   .slide-image {
-    width: 120px; /* Adjust width of each slide image for smaller screens */
+    width: 120px;
   }
 
   .slide-image:nth-child(1),
   .slide-image:nth-child(2),
   .slide-image:nth-child(3),
   .slide-image:nth-child(4) {
-    width: 100%; /* Full width for smaller screens, one image per row */
+    width: 100%;
   }
 }
 
@@ -232,6 +227,7 @@ html {
 }
 
 .product-card {
+  animation: slideInFromTop 1s ease-in-out;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -241,11 +237,13 @@ html {
   text-align: center;
 }
 
+
 .product-image {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 5px;
+  
 }
 
 .product-card h3 {
@@ -263,3 +261,22 @@ html {
   text-decoration: underline;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}

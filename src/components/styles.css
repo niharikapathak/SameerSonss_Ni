@@ -1,0 +1,127 @@
+/* Body Style */
+.bodyStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  /* Background Image Container */
+  .img {
+    background-image: url('../images/background_image.png'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 10px; /* Adjust padding to create space from the top */
+  }
+  
+  /* Form Container */
+  .sty1 {
+    
+  
+    padding-top: 20px;
+    margin-top: auto;
+    width: 130%;
+    max-width: 800px;
+    text-align: center; /* Center-align text */
+  }
+  
+  
+  
+  /* Form Labels */
+  .inline-label {
+  
+    width: 120px; /* Adjust width as needed */
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 5px;
+  
+  }
+  
+  /* Form Group Inline */
+  .form-group-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust spacing between form groups */
+    margin-bottom: 15px;
+  }
+  
+  /* Form Inputs */
+  .form-control {
+    height: 50px; /* Increase the height of input fields */
+    width: calc(100% - 130px); /* Adjust width to fit inline with label */
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent background */
+    border: 1px solid #ccc; /* Add border for visibility */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color:black; /* Text color */
+    box-shadow: none; /* Remove inner shadow for input fields */
+  }
+  
+  .form-control::placeholder {
+    color: #888; /* Placeholder text color */
+  }
+  
+  /* Textarea Control */
+  .textarea-control {
+    height: 100px; /* Increase the height of the textarea */
+    width: calc(100% - 130px); /* Adjust width to fit inline with label */
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent background */
+    border: 1px solid #ccc; /* Add border for visibility */
+    padding: 10px;
+    font-size: 16px;
+    color: #000; /* Text color */
+    box-shadow: none; /* Remove inner shadow for textarea */
+  }
+  
+  .textarea-control::placeholder {
+    color: #888; /* Placeholder text color */
+  }
+  
+  /* Submit Button */
+  .sty2 {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .sty2:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Required field indicator */
+  .required-label::after {
+    content: '*';
+    color: red;
+    margin-left: 5px;
+  }
+  
+  /* Success Message */
+  .success-message {
+    color: red;
+    font-size: 20px;
+    font-weight:bolder;
+    margin-top: 10px;
+    text-align: center;
+  
+  }
+  

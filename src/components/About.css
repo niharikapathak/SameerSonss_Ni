@@ -26,4 +26,73 @@
     font-weight: bold;
     color: #333;
   }
-  
+  /* Bootstrap overrides */
+.navbar {
+  border-style: none !important;
+}
+
+.mycustmenu {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #2f2fa2 !important;
+}
+
+.mycustmenu:hover {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white !important;
+}
+
+/* Custom styles */
+.s1 {
+  text-align: left;
+}
+
+.s2 {
+  font-size: 20px;
+  color: #f64c72;
+}
+
+.s3 {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #f64c72;
+}
+
+.s4 {
+  font-family: Arial, sans-serif;
+}
+
+.s5 {
+  font-size: 30px;
+  color: #f64c72;
+  text-decoration: underline;
+}
+
+.s7 {
+  text-align: justify;
+  margin-left: 40px;
+  font-weight:600;
+  width: 864px;
+  color: #000000;
+}
+
+.s9 {
+  color: #f64c72;
+}
+
+.s10 {
+  color: #000000;
+  font-size: 15px;
+  font-weight:600;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.s11 {
+  font-size: 30px;
+}
+
+.s12 {
+  font-family: "Times New Roman", Times, serif;
+  color: #f64c72;
+}
